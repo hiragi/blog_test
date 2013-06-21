@@ -1,0 +1,79 @@
+// Place all the styles related to the entries controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+    background-color: #FFFFCC;
+    link: #AAA;
+    vlink: #AAA;
+    font-family:'Lucida Grande',
+    'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3',
+    Meiryo, メイリオ, sans-serif;
+}
+
+#wrapper{
+#    background-color: blue;
+    width: 800px;
+    margin: 10px auto;
+}
+
+#contents{
+    margin: 5px;
+    padding: 5px;
+}
+
+#entry{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+#entry_wrapper{
+    margin-bottom: 30px;
+}
+
+#entry_item{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#entry_body{
+    font-size: 14px;
+}
+
+#read_more{
+    margin-top: 10px;
+}
+
+header, footer{
+#    background-color: red;
+    margin: 5px;
+    padding: 5px;
+}
+
+footer{
+    text-align: center;
+}
+
+h2{
+    color: #888888;
+}
+
+#update_time{
+    text-align: right;
+    font-size: 12px;
+}
+
+#navi{
+}
+
+#control_bar{
+   text-align: right;
+   padding: 10px;
+
+   -moz-border-radius: 20px;
+   -webkit-border-radius: 20px;
+   border-radius: 20px;
+
+   border: 3px #FFFFCC solid;
+   background-color: #FFFFCC;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BlogTest</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header>
+    <a href="/entries"><%= image_tag 'ikoyo.jpg', :size => '156x82', :alt => 'Logo' %></a>
+  </header>
+  <div id="wrapper">
+    <div id="contents">
+      <%= yield %>
+    </div>
+  </div>
+  <footer>
+    footer
+  </footer>
+</body>
+</html>

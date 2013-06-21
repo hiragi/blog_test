@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to '戻る', entries_path %>
+<hr>
+
+<div id="entry_item">
+  <h1><%= @entry.title %></h1>
+  <div id="entry_body">
+    <%= @entry.content %>
+  </div>
+  <div id="control_bar">
+    <%= @entry.updated_at %><br>
+    <%= link_to '編集', edit_entry_path(@entry) %>
+  </div>
+</div>

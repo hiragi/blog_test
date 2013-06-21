@@ -1,0 +1,31 @@
+<div id="navi">
+  <%= link_to '投稿', new_entry_path %>
+</div>
+
+<hr>
+
+<% @entries.each do |entry| %>
+  <div id="entry">
+    <div id="entry_wrapper">
+      <%= entry.updated_at.strftime("%Y-%m-%d %H:%M") %>
+      <div id="entry_item">
+        <h2><%= link_to entry.title, entry %></h2>
+        <div id="entry_body">
+          <%= (entry.content)[0..79] %>
+          <%= (entry.content).size >= 80 ? "..." : "" %><br>
+        </div>
+        <div id="read_more">
+          <%= link_to "もっと見る", entry %>
+        </div>
+      </div>
+    </div>
+
+    <div id="control_bar">
+      <%= entry.updated_at %><br>
+      <%= link_to '編集', edit_entry_path(entry) %>
+      <%= link_to '削除', entry, method: :delete, data: { confirm: 'Are you sure?' } %>
+    </div>
+  </div>
+  <hr>
+<% end %>
+
