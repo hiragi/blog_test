@@ -44,6 +44,9 @@ body{
     margin-top: 10px;
 }
 
+#form{
+}
+
 header, footer{
 #    background-color: red;
     margin: 5px;
@@ -76,4 +79,12 @@ h2{
 
    border: 3px #FFFFCC solid;
    background-color: #FFFFCC;
+}
+
+nav{
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    background-color: #FFFFCC;
+    margin-bottom: 30px;
 }

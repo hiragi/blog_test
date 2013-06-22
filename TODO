@@ -14,3 +14,6 @@
 
 (Pagenation)
 (JQuery: ボタン、テキストエリア)
+
+初回起動時に、rake db:migrateをする必要がある。
+

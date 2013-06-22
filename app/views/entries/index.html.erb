@@ -1,3 +1,5 @@
+<%= paginate @entries %>
+
 <div id="navi">
   <%= link_to '投稿', new_entry_path %>
 </div>
@@ -11,19 +13,21 @@
       <div id="entry_item">
         <h2><%= link_to entry.title, entry %></h2>
         <div id="entry_body">
-          <%= (entry.content)[0..79] %>
+          <%= simple_format((entry.content)[0..79]) %>
           <%= (entry.content).size >= 80 ? "..." : "" %><br>
         </div>
         <div id="read_more">
-          <%= link_to "もっと見る", entry %>
+          <% if (entry.content).size >= 80 %>
+            <%= link_to "もっと見る", entry %>
+          <% end %>
         </div>
       </div>
     </div>
 
     <div id="control_bar">
-      <%= entry.updated_at %><br>
+      <%= entry.updated_at.strftime("%Y-%m-%d %H:%M") %><br>
       <%= link_to '編集', edit_entry_path(entry) %>
-      <%= link_to '削除', entry, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to '削除', entry, method: :delete, data: { confirm: '本当に削除しますか？' } %>
     </div>
   </div>
   <hr>

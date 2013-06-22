@@ -3,13 +3,19 @@
 <%= link_to '戻る', entries_path %>
 <hr>
 
-<div id="entry_item">
-  <h1><%= @entry.title %></h1>
-  <div id="entry_body">
-    <%= @entry.content %>
+<div id="entry">
+  <div id="entry_wrapper">
+    <%= @entry.updated_at.strftime("%Y-%m-%d %H:%M") %>
+    <div id="entry_item">
+      <h2><%= @entry.title %></h2>
+      <div id="entry_body">
+        <%= simple_format(@entry.content) %>
+      </div>
+    </div>
   </div>
   <div id="control_bar">
-    <%= @entry.updated_at %><br>
+    <%= @entry.updated_at.strftime("%Y-%m-%d %H:%M") %><br>
     <%= link_to '編集', edit_entry_path(@entry) %>
+    <%= link_to '削除', @entry, method: :delete, data: { confirm: '本当に削除しますか' } %>
   </div>
 </div>

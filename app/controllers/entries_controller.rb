@@ -2,7 +2,8 @@ class EntriesController < ApplicationController
   # GET /entries
   # GET /entries.json
   def index
-    @entries = Entry.all
+#    @entries = Entry.all
+		@entries = Entry.page(params[:page]).per(5)
 
     respond_to do |format|
       format.html # index.html.erb
