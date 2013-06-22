@@ -8,15 +8,17 @@
 </head>
 <body>
   <header>
-    <a href="/entries"><%= image_tag 'ikoyo.jpg', :size => '156x82', :alt => 'Logo' %></a>
+    <a href="/"><%= image_tag 'ikoyo.jpg', :size => '156x82', :alt => 'Logo' %></a>
   </header>
   <div id="wrapper">
     <div id="contents">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
       <%= yield %>
     </div>
   </div>
   <footer>
-    footer
+    Created by hiragi
   </footer>
 </body>
 </html>

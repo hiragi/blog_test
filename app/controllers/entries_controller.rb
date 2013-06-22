@@ -1,6 +1,9 @@
 class EntriesController < ApplicationController
   # GET /entries
   # GET /entries.json
+
+	before_filter :authenticate_user!, :only => ['new', 'edit', 'update', 'destroy']
+
   def index
 #    @entries = Entry.all
 		@entries = Entry.page(params[:page]).per(5)

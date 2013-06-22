@@ -13,11 +13,13 @@
       <div id="entry_item">
         <h2><%= link_to entry.title, entry %></h2>
         <div id="entry_body">
-          <%= simple_format((entry.content)[0..79]) %>
-          <%= (entry.content).size >= 80 ? "..." : "" %><br>
+          <% if entry.content != nil %>
+            <%= simple_format((entry.content)[0..79]) %>
+            <%= (entry.content).size >= 80 ? "..." : "" %><br>
+          <% end %>
         </div>
         <div id="read_more">
-          <% if (entry.content).size >= 80 %>
+          <% if entry.content != nil && (entry.content).size >= 80 %>
             <%= link_to "もっと見る", entry %>
           <% end %>
         </div>
@@ -32,4 +34,6 @@
   </div>
   <hr>
 <% end %>
+
+<%= paginate @entries %>
 
