@@ -17,3 +17,14 @@
     <%= link_to '削除', @entry, method: :delete, data: { confirm: '本当に削除しますか' } %>
   </div>
 </div>
+
+<h3>コメント</h3>
+<% @entry.comments.each do |entry| %>
+  <div>
+    <strong><%= entry.commenter %></strong>
+    <br />
+    <p><%= entry.body %><p>
+  </div>
+<% end %>
+
+<%= render 'comments/form' %>
