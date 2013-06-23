@@ -5,8 +5,7 @@ class EntriesController < ApplicationController
 	before_filter :authenticate_user!, :only => ['new', 'edit', 'update', 'destroy']
 
   def index
-#    @entries = Entry.all
-		@entries = Entry.page(params[:page]).per(5)
+		@entries = Kaminari.paginate_array(Entry.all.reverse).page(params[:page]).per(5)
 
     respond_to do |format|
       format.html # index.html.erb
