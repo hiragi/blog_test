@@ -1,4 +1,4 @@
-== Welcome to Blog Test
+Welcome to Blog Test
 
 $ bundle install
 $ rake db:migrate
