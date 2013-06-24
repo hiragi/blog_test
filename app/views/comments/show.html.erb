@@ -1,14 +1,12 @@
-<p id="notice"><%= notice %></p>
-
 <p>
-  <b>User name:</b>
-  <%= @comment.commenter %>
+  <b>名前:</b>
+  <%= @comment.user_name %>
 </p>
 
 <p>
-  <b>Body:</b>
+  <b>コメント:</b>
   <%= @comment.body %>
 </p>
 
-<%= link_to 'Edit', edit_comment_path(@comment) %> |
-<%= link_to 'Back', "/" %>
+<%= link_to '編集', edit_comment_path(@comment) %> |
+<%= link_to '戻る', "/" %>

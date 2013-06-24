@@ -18,13 +18,14 @@
   </div>
 </div>
 
-<h3>コメント</h3>
-<% @entry.comments.each do |entry| %>
+<div id="comment">
+  <h2>コメント</h2>
+  <% @entry.comments.each do |entry| %>
   <div>
-    <strong><%= entry.commenter %></strong>
-    <br />
-    <p><%= entry.body %><p>
+    <h3><%= entry.user_name %></h3>
+    <blockquote><%= entry.body %></blockquote>
   </div>
-<% end %>
+  <% end %>
+</div>
 
 <%= render 'comments/form' %>

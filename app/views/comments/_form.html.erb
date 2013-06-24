@@ -2,7 +2,6 @@
   <% if @comment.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
-
       <ul>
       <% @comment.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
@@ -12,16 +11,16 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :commenter %><br />
-    <%= f.text_field :commenter %>
+    <%= f.label "名前" %><br />
+    <%= f.text_field :user_name %>
   </div>
   <div class="field">
-    <%= f.label :body %><br />
-    <%= f.text_area :body %>
+    <%= f.label "コメント" %><br />
+    <%= f.text_area :body, :size => '100x10' %>
   </div>
     <%= f.hidden_field :entry_id %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "投稿" %>
   </div>
 <% end %>
