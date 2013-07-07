@@ -11,9 +11,7 @@ gem 'sqlite3'
 #gem 'pg'
 
 gem 'unicorn'
-group :development do
-  gem "capistrano-unicorn", require: false
-end
+gem "capistrano-unicorn", require: false
 
 # Gems used only for assets and not required
 # in production environments by default.
